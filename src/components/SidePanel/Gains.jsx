@@ -38,8 +38,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Form from 'react-bootstrap/Form';
-import { CollapsibleGroup } from 'pc-nrfconnect-shared';
-import { Slider } from '../../from_pc-nrfconnect-shared';
+import { CollapsibleGroup, Slider } from 'pc-nrfconnect-shared';
 
 import { updateGains } from '../../actions/deviceActions';
 import { appState } from '../../reducers/appReducer';

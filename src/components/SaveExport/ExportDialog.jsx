@@ -48,8 +48,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { Toggle } from 'pc-nrfconnect-shared';
 
-import { Toggle } from '../../from_pc-nrfconnect-shared';
 import { appState, hideExportDialog } from '../../reducers/appReducer';
 import { chartState } from '../../reducers/chartReducer';
 import { options, timestampToIndex, indexToTimestamp } from '../../globals';

@@ -40,7 +40,7 @@ import Form from 'react-bootstrap/Form';
 import SelectableContext from 'react-bootstrap/SelectableContext';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { NumberInlineInput } from '../../../from_pc-nrfconnect-shared';
+import { NumberInlineInput } from 'pc-nrfconnect-shared';
 import { updateTriggerLevel } from '../../../actions/deviceActions';
 
 const TriggerLevel = ({ triggerLevel, externalTrigger }) => {

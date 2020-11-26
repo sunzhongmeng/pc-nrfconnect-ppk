@@ -39,8 +39,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { unit } from 'mathjs';
-import { Group } from 'pc-nrfconnect-shared';
-import { Slider } from '../../from_pc-nrfconnect-shared';
+import { Group, Slider } from 'pc-nrfconnect-shared';
 
 import NumberWithUnit from './NumberWithUnitInput';
 

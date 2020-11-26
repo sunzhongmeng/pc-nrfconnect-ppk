@@ -38,7 +38,7 @@ import React, { useState, useEffect } from 'react';
 import { number, string, func, bool } from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import rangeShape from 'pc-nrfconnect-shared/src/Slider/rangeShape';
-import { NumberInlineInput, Slider } from '../../from_pc-nrfconnect-shared';
+import { NumberInlineInput, Slider } from 'pc-nrfconnect-shared';
 
 const NumberWithUnit = ({
     title = '',

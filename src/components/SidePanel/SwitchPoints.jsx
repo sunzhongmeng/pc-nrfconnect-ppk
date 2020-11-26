@@ -39,8 +39,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { CollapsibleGroup } from 'pc-nrfconnect-shared';
-import { Slider, Toggle } from '../../from_pc-nrfconnect-shared';
+import { CollapsibleGroup, Slider, Toggle } from 'pc-nrfconnect-shared';
 
 import {
     spikeFilteringToggle,

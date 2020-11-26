@@ -40,8 +40,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Form from 'react-bootstrap/Form';
-import { CollapsibleGroup } from 'pc-nrfconnect-shared';
-import { NumberInlineInput, Slider } from '../../from_pc-nrfconnect-shared';
+import {
+    CollapsibleGroup,
+    NumberInlineInput,
+    Slider,
+} from 'pc-nrfconnect-shared';
 
 import { updateResistors, resetResistors } from '../../actions/deviceActions';
 import { appState } from '../../reducers/appReducer';
