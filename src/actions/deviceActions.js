@@ -71,6 +71,7 @@ import {
     updateHasDigitalChannels,
     resetCursorAndChart,
 } from '../reducers/chartReducer';
+import { setSamplingAttrsAction } from '../reducers/dataLoggerReducer';
 import { options, updateTitle } from '../globals';
 import { updateGainsAction } from '../reducers/gainsReducer';
 import { isScopePane } from '../utils/panes';
@@ -223,7 +224,6 @@ export function open(deviceInfo) {
         let nbSamplesTotal = 0;
 
         const onSample = ({ value, bits }) => {
-            // PPK1 always sets timestamp, while PPK2 never does
             if (options.timestamp === undefined) {
                 options.timestamp = 0;
             }
@@ -235,7 +235,6 @@ export function open(deviceInfo) {
             const { currentPane } = getState().appLayout;
 
             let zeroCappedValue = zeroCap(value);
-
             if (samplingRunning) {
                 nbSamples += 1;
                 nbSamplesTotal += 1;
@@ -275,6 +274,11 @@ export function open(deviceInfo) {
 
         try {
             device = new Device(deviceInfo, onSample);
+            dispatch(
+                setSamplingAttrsAction(
+                    device.capabilities.maxContinuousSamplingTimeUs
+                )
+            );
             dispatch(setupOptions());
             dispatch(setDeviceRunningAction(device.isRunningInitially));
             const metadata = device.parseMeta(await device.start());
